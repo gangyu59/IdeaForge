@@ -1,0 +1,154 @@
+/* ===== 原有样式（完整保留） ===== */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+    background: #f5f7fb;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    background: #eee;
+    margin-left: 8px;
+}
+
+.badge.draft { background: #ddd; }
+.badge.converged { background: #ffd666; }
+.badge.planning { background: #95de64; }
+
+.round {
+    border-left: 4px solid #1677ff;
+    padding-left: 12px;
+    margin-bottom: 12px;
+}
+
+.round h3 {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+}
+
+pre {
+    white-space: pre-wrap;
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e6f4ff;
+}
+
+.round.collapsed pre {
+    display: none;
+}
+
+.round-toggle {
+    font-size: 12px;
+    color: #1677ff;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.loading {
+    color: #999;
+    font-size: 14px;
+}
+
+.plan {
+    border-left: 4px solid #52c41a;
+    background: #f6ffed;
+}
+
+/* ===== 新增：Refine UI 样式（追加，不覆盖） ===== */
+
+.refine-layout {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.refine-sections {
+    width: 200px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.section-item {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.section-item:hover {
+    background: #f0f0f0;
+}
+
+.section-item.active {
+    background: #e6f4ff;
+    font-weight: bold;
+}
+
+.refine-content {
+    flex: 1;
+}
+
+.actions {
+    margin-top: 12px;
+}
+
+/* ===== AI Thinking Indicator ===== */
+
+.ai-thinking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.ai-hourglass {
+    width: 36px;
+    height: 18px;
+    border: 3px solid #bbb;
+    border-bottom: none;
+    border-radius: 36px 36px 0 0;
+    position: relative;
+    animation: spin-hourglass 1s linear infinite;
+}
+
+@keyframes spin-hourglass {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

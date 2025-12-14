@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Idea Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html">← 返回</a>
+
+    <div id="idea"></div>
+
+    <!-- ===== 新增：产品定义 Refine（不影响原讨论） ===== -->
+    <div class="card" id="refine-card">
+        <h2>产品定义
+        <button id="btnConverge"> 生成完整文档 </button>
+        </h2>
+
+        <div class="refine-layout">
+            <div class="refine-sections" id="sectionList"></div>
+
+            <div class="refine-content">
+                <pre id="sectionContent">请选择左侧一个部分</pre>
+
+                <div class="actions">
+                    <button id="btnDeepen">深化</button>
+                    <button id="btnChallenge">质疑</button>
+                    <button id="btnFreeze">认可</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 最终产品定义独立区域 -->
+    <div id="finalOutput" style="display:none;">
+        <h2>最终产品定义</h2>
+
+        <div class="final-toolbar">
+            <button id="btnDownloadPdf">下载 PDF</button>
+            <button id="btnDownloadDocx">下载 DOCX</button>
+        </div>
+
+        <pre id="finalContent"></pre>
+    </div>
+
+    <!-- ===== 新增结束 ===== -->
+
+    <div id="discussion"></div>
+    <div id="versions"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
